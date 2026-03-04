@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site para organizar meu horário de estudo e minha rotina no geral">
+    <title>Study Time Lira - Minha Rotina de Estudos</title>
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    
+</head>
+<body>
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo"> Study Time</h1>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#disciplinas">Disciplinas</a></li>
+                    <li><a href="#horarios">Cronograma</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#progresso">Progresso</a></li>
+                </ul>
+                <small>Site por: Thamires Linda</small>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- SEÇÃO INICIAL / HERO -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao meu Organizador de Estudos</h2>
+                <p>Organize sua rotina, acompanhe seu progresso e alcance suas metas acadêmicas.</p>
+                <button class="btn-primary">Começar</button>
+            </div>
+        </section>
+
+        <!-- DISCIPLINAS -->
+        <section id="disciplinas" class="disciplinas">
+            <div class="container">
+                <h2>Minhas Disciplinas</h2>
+
+                <form id="disciplina-form" class="disciplina-form">
+                    <input type="text" id="disciplina-nome" placeholder="Nome da disciplina (ex: Matemática)" required />
+                    <input type="text" id="disciplina-conteudo" placeholder="Conteúdo principal" />
+                    <input type="text" id="disciplina-metodo" placeholder="Método de estudo" />
+                    <select id="disciplina-status">
+                        <option value="Em Progresso">Em Progresso</option>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Concluído">Concluído</option>
+                    </select>
+                    <button type="submit" class="btn-primary">Salvar disciplina</button>
+                </form>
+
+                <div id="disciplinas-list-container">
+                    <div class="cards-grid" id="disciplinas-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRONOGRAMA / HORÁRIOS -->
+        <section id="horarios" class="horarios">
+            <div class="container">
+                <h2>Cronograma de Estudos</h2>
+                <form id="horario-form" class="horario-form">
+                    <select id="horario-dia">
+                        <option value="Segunda">Segunda</option>
+                        <option value="Terça">Terça</option>
+                        <option value="Quarta">Quarta</option>
+                        <option value="Quinta">Quinta</option>
+                        <option value="Sexta">Sexta</option>
+                        <option value="Sábado">Sábado</option>
+                        <option value="Domingo">Domingo</option>
+                    </select>
+                    <input type="text" id="horario-manha" placeholder="Manhã (ex: Escola)" />
+                    <input type="text" id="horario-tarde" placeholder="Tarde (ex: Estudo)" />
+                    <input type="text" id="horario-noite" placeholder="Noite (ex: Revisão)" />
+                    <button type="submit" class="btn-primary">Salvar horário</button>
+                </form>
+
+                <table class="tabela-horarios">
+                    <thead>
+                        <tr>
+                            <th>Dia da Semana</th>
+                            <th>Manhã</th>
+                            <th>Tarde</th>
+                            <th>Noite</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-horarios-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- OBJETIVOS -->
+        <section id="objetivos" class="objetivos">
+            <div class="container">
+                <h2>Meus Objetivos</h2>
+                <form id="objetivo-form" class="objetivo-form">
+                    <input type="text" id="objetivo-text" placeholder="Novo objetivo (ex: Revisar provas)" required />
+                    <button type="submit" class="btn-primary">Adicionar</button>
+                </form>
+
+                <ul class="lista-objetivos" id="objetivos-list"></ul>
+            </div>
+        </section>
+
+        <!-- PROGRESSO -->
+        <section id="progresso" class="progresso">
+            <div class="container">
+                <h2>Acompanhamento de Progresso</h2>
+                <div class="progresso-items">
+                    <div class="progresso-item">
+                        <h3>Enem(GERAL)</h3>
+                        <div class="barra-progresso">
+                            <div class="progresso-bar" style="width: 75%;"></div>
+                        </div>
+                        <p>0% Completo</p>
+                    </div>
+                    <div class="progresso-item">
+                        <h3>DIA 1</h3>
+                        <div class="barra-progresso">
+                            <div class="progresso-bar" style="width: 80%;"></div>
+                        </div>
+                        <p>0% Completo</p>
+                    </div>
+                    <div class="progresso-item">
+                        <h3>DIA 2</h3>
+                        <div class="barra-progresso">
+                            <div class="progresso-bar" style="width: 60%;"></div>
+                        </div>
+                        <p>0% Completo</p>
+                    </div>
+                    <div class="progresso-item">
+                        <h3>Programação</h3>
+                        <div class="barra-progresso">
+                            <div class="progresso-bar" style="width: 70%;"></div>
+                        </div>
+                        <p>0% Completo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROTINA DO USUÁRIO -->
+        <section id="rotina" class="rotina">
+            <div class="container">
+                <h2>Minha Rotina</h2>
+                <p>Adicione itens da sua rotina de estudos e organize seu dia.</p>
+
+                <form id="rotina-form" class="rotina-form">
+                    <input type="text" id="rotina-title" placeholder="O que você vai fazer? (ex: Revisar matemática)" required />
+                    <input type="text" id="rotina-day" placeholder="Dia (ex: Segunda)" />
+                    <input type="time" id="rotina-time" placeholder="Hora (opcional)" />
+                    <button type="submit" class="btn-primary">Adicionar</button>
+                </form>
+
+                <div id="rotina-list-container">
+                    <h3>Itens da rotina</h3>
+                    <ul id="rotina-list" class="rotina-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Study Time</h3>
+                <p>Meu assistente pessoal para organizar e acompanhar minha rotina de estudos.</p>
+            </div>
+            <p class="copyright">&copy; 2026 Study Time. Todos os direitos reservados a mim.</p>
+
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

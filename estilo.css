@@ -1,0 +1,350 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffc0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background-color: #d4226f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(212, 34, 111, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* SEÇÕES */
+section {
+    transition: all 0.3s ease;
+}
+
+section h2 {
+    color: #d4226f;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(212, 34, 111, 0.1);
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ffc0e0 0%, #fff5f7 100%);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(212, 34, 111, 0.15);
+    border: 2px solid #f0a8d4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(212, 34, 111, 0.3);
+    border-color: #d4226f;
+}
+
+.card h3 {
+    color: #d4226f;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #666;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* TABELA */
+.tabela-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff5f7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(212, 34, 111, 0.15);
+}
+
+.tabela-horarios thead {
+    background-color: #d4226f;
+    color: white;
+}
+
+.tabela-horarios th {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tabela-horarios td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #f0a8d4;
+    transition: background-color 0.3s ease;
+}
+
+.tabela-horarios tbody tr:nth-child(even) {
+    background-color: #ffe8f5;
+}
+
+.tabela-horarios tbody tr:hover {
+    background-color: #f0a8d4;
+}
+
+.tabela-horarios .descanso {
+    background-color: #d4e5d4 !important;
+    color: #2d5a2d;
+    font-weight: bold;
+}
+
+/* LISTA DE OBJETIVOS */
+.lista-objetivos {
+    list-style: none;
+    padding: 20px;
+}
+
+.lista-objetivos li {
+    padding: 12px 20px;
+    margin: 10px 0;
+    background-color: #fff5f7;
+    border-left: 4px solid #d4226f;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.lista-objetivos li:hover {
+    background-color: #f0a8d4;
+    transform: translateX(10px);
+    box-shadow: 0 4px 10px rgba(212, 34, 111, 0.2);
+}
+
+/* PROGRESSO */
+.progresso-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.progresso-item {
+    padding: 20px;
+    background-color: #fff5f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(212, 34, 111, 0.1);
+}
+
+.progresso-item h3 {
+    color: #d4226f;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 25px;
+    background-color: #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progresso-bar {
+    background: linear-gradient(90deg, #d4226f, #f0a8d4);
+    height: 100%;
+    transition: width 1s ease;
+    border-radius: 12px;
+}
+
+/* BOTÃO */
+.btn-primary {
+    background-color: #d4226f;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 34, 111, 0.3);
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #b01955;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 34, 111, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* STATUS */
+.status-ativo {
+    background-color: #d4226f;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #d4226f;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progresso-items {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .tabela-horarios td,
+    .tabela-horarios th {
+        padding: 10px 5px;
+    }
+}
